@@ -1,6 +1,18 @@
 <?php
 
+Route::get('/', function () {
+    return redirect()->to(route('login'));
+});
+
+Route::get('/login','LoginController@showForm')->name('login');
+Route::post('/login','LoginController@login')->name('login');
+Route::post('/logout','LoginController@logout')->name('logout');
+
+Route::get('/layouts/welcome','HomeController@store')->name('home_laravel');
+
 Route::get('/', 'HomeController@home')->name('home');
+
+
 
 Route::get('/usuario/formulario', 'usuarioController@formulario')->name('formulario');
 

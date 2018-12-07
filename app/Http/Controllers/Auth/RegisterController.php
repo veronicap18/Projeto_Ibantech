@@ -37,7 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**
@@ -66,7 +66,18 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'tipo' => $data['selecione'],
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function showRegistrationForm(){
+        $check = \Auth::user()->tipo;
+        if($check == 1){
+        return view('auth.register');
+        }else{
+            return redirect('/home');
+        }
+    }
 }
+

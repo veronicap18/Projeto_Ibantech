@@ -8,6 +8,12 @@ use DB;
 
 class animalController extends Controller
 {
+
+	public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
 	{
 	    return view('animal.cadastro');

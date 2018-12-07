@@ -61,6 +61,12 @@
                             </div>
                         </div>
 
+                        <select name="selecione">
+                            <option>Selecione</option>
+                            <option value="1">Gerente</option>
+                            <option value="2">Funcionário</option>
+                        </select>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
