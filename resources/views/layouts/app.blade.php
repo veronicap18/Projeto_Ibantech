@@ -39,7 +39,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                      @if (Auth::check())
+                        <li><a href="{{route('home')}}" class='nav-link'>Home</a></li>
+                      @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,6 +72,7 @@
                                     </form>
                                 </div>
                             </li>
+
                         @endguest
                     </ul>
                 </div>

@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-12">
-                <center><div class="card-header">IBANTECH</div></center>
+                <center><div class="card-header"><h1>IbanTech</h1></div></center>
 
                 <div class="card-body">
                     @if (session('status'))

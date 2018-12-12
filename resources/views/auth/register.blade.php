@@ -59,8 +59,10 @@
                             </div>
                         </div>
                         <div class="form-group row mb-3">
-                          <div class="col-md-6 offset-md-4">
+                          <div class="col-md-4 col-form-label text-md-right">Cargo</div>
+                          <div class="col-md-6">
                             <select required name="selecione" class="custom-select">
+                              <option value="" disabled selected></option>
                               <option value="1">Gerente</option>
                               <option value="2">Funcionário</option>
                             </select>
