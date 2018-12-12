@@ -12,17 +12,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="/js/moment.min.js"></script>
-    <script src="/js/bootstrap-datetimepicker.min.js"></script>
+    {{-- <script src="/js/moment.min.js"></script> --}}
+    {{-- <script src="/js/bootstrap-datetimepicker.min.js"></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-    <link href="{{asset('css/pe-icon-7-stroke.css')}}" rel="stylesheet" />
+    {{-- <link href="{{asset('css/pe-icon-7-stroke.css')}}" rel="stylesheet" /> --}}
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    {{-- <link href="/css/bootstrap-datetimepicker.min.css" rel="stylesheet"> --}}
 
 </head>
 <body>
