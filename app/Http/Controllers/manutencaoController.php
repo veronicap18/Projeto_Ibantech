@@ -12,7 +12,7 @@ class manutencaoController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -52,6 +52,13 @@ class manutencaoController extends Controller
      */
     public function store(Request $request)
     {
+
+      $this->validate($request, [
+        'prox_limpeza' => 'required|date',
+        'prox_vacina'  => 'required|date',
+        'prox_alimentacao'  => 'required|date',
+        'id'  => 'required',
+      ]);
 
         $prox_limpeza = Input::get('prox_limpeza');
         $prox_vacina = Input::get('prox_vacina');

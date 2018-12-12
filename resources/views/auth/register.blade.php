@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-12">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -60,12 +58,15 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
-                        <select name="selecione">
-                            <option>Selecione</option>
-                            <option value="1">Gerente</option>
-                            <option value="2">Funcionário</option>
-                        </select>
+                        <div class="form-group row mb-3">
+                          <div class="col-md-6 offset-md-4">
+                            <select required name="selecione" class="custom-select">
+                              <option>Selecione</option>
+                              <option value="1">Gerente</option>
+                              <option value="2">Funcionário</option>
+                            </select>
+                          </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -77,7 +78,18 @@
                     </form>
                 </div>
             </div>
-        </div>
     </div>
-</div>
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
 @endsection

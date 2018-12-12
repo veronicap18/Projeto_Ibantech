@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-12">
                 <center><div class="card-header">IBANTECH</div></center>
 
                 <div class="card-body">
@@ -23,16 +21,11 @@
                     histórico de manutenção, ou seja, informar datas importantes acerca da preservação
                     da fauna (alimentação, limpeza e vacinação). E por fim, existe a opção de apagar do
                     banco de dados animais que não mais se encontram no instituto.</p>
-
-                    <a href = "{{route('cadastro')}}" class="dropdown-content">Cadastrar animal</a><br>
-
-                    
-
-                    <a href="{{route('listar')}}" class="dropdown">Listar</a>
-
+                    <div class="btn-group mr-3" role="group">
+                      <a href = "{{route('cadastro')}}" class="btn btn-outline-primary">Cadastrar animal</a><br>
+                      <a href="{{route('listar')}}" class="btn btn-outline-secondary">Listar</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection

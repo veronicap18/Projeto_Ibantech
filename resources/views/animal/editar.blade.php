@@ -1,27 +1,38 @@
-<head>
-	<script>
-		function myFunction(){
-			var button = alert("Animal editado com sucesso!");
-		}
+@extends('layouts.app')
+@section('content')
+	{{-- <div style = "background-color: white; padding: 1% 1%"> --}}
+	<div class="card-header">
+		<h1 class="text-center"><b>Cadastro de animais</b></h1>
+	</div>
+		<div class="card-body">
+			<form method="POST" action="{{route('update',[$request->id])}}">
+				{{csrf_field()}}
+				{{method_field('PUT')}}
+				<div class="form-group">
+					<label for="nome">Nome do animal:</label>
+					<input type = "text" name = "nome_animal" id="nome" class="form-control" placeholder="{{$request->nome_animal}}"/><br>
+				</div>
+				<div class="form-group">
+					<label for="esp_animal">Espécie do animal:</label>
+					<input type = "text" name = "esp_animal" id="esp_animal" class="form-control" placeholder="{{$request->esp_animal}}"/><br>
+				</div>
+				<div class="form-group">
+					<label for="unidades">Unidade(s):</label>
+					<input type = "number" name = "unidades" class="form-control" id="unidades" placeholder="{{$request->unidades}}"/><br>
+				</div>
+				<div class="form-group">
+					<label for="num_setor">Núm. do setor: </label>
+					<input type = "number" name = "num_setor" class="form-control" id="num_setor" placeholder="{{$request->num_setor}}"/><br>
+				</div>
 
-	</script>
+				<button id = "botao_cadastro" class="btn btn-outline-primary">Cadastrar</button>
+			</form>
 
-
-</head>
-<body style="background-color: #f5f8fa">
-	<div style = "background-color: white; padding: 1% 1%">
-		<form method="POST" action="{{route('update',[$request->id])}}">
-			@method('PUT')
-			{{csrf_field()}}
-			<h2> Cadastro de animais </h2>
-			Nome do animal: <input type = "text" placeholder="{{$request->nome_animal}}" name = "nome_animal"/><br>
-			Espécie do animal: <input type = "text" placeholder="{{$request->esp_animal}}" name = "esp_animal"/><br>
-			Unidade(s): <input type = "number" placeholder="{{$request->unidades}}" name = "unidades"/><br>
-			Núm. do setor: <input type = "number" placeholder="{{$request->num_setor}}" name = "num_setor"/><br>
-
-			<button id = "botao_cadastro" onclick="myFunction()">Cadastrar</button>
-		</form>
 	</div>
 	<br>
-	<a href="{{route('home')}}" style = "text-decoration: none; color: #007bff">Voltar</a>	
-</body>
+
+@endsection
+@section('back')
+	<a href="/animal/listar" class="btn btn-outline-info mt-3">Voltar</a>
+@endsection
+{{-- </body> --}}

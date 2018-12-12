@@ -1,4 +1,4 @@
-<head>
+{{-- <head>
 	<script>
 		function myFunction(){
 			var button = alert("Animal cadastrado com sucesso!");
@@ -7,20 +7,41 @@
 	</script>
 
 
-</head>
-<body style="background-color: #f5f8fa">
-	<div style = "background-color: white; padding: 1% 1%">
-		<form method="POST" action="{{route('salvar_cadastro')}}">
-			{{csrf_field()}}
-			<h2> Cadastro de animais </h2>
-			Nome do animal: <input type = "text" name = "nome_animal"/><br>
-			Espécie do animal: <input type = "text" name = "esp_animal"/><br>
-			Unidade(s): <input type = "number" name = "unidades"/><br>
-			Núm. do setor: <input type = "number" name = "num_setor"/><br>
+</head> --}}
+{{-- <body style="background-color: #f5f8fa"> --}}
+@extends('layouts.app')
+@section('content')
+	<div class="card-header">
+		<h1 class="text-center"><b>Cadastro de Animais</b></h1>
+	</div>
+	<div class="card-body">
+			<form method="POST" action="{{route('salvar_cadastro')}}">
+				{{csrf_field()}}
+				<div class="form-group">
+					<label for="nome">Nome do animal:</label>
+					<input type = "text" name = "nome_animal" id="nome" class="form-control"/><br>
+				</div>
+				<div class="form-group">
+					<label for="esp_animal">Espécie do animal:</label>
+					<input type = "text" name = "esp_animal" id="esp_animal" class="form-control"/><br>
+				</div>
+				<div class="form-group">
+					<label for="unidades">Unidade(s):</label>
+					<input type = "number" name = "unidades" class="form-control" id="unidades"/><br>
+				</div>
+				<div class="form-group">
+					<label for="num_setor">Núm. do setor: </label>
+					<input type = "number" name = "num_setor" class="form-control" id="num_setor"/><br>
+				</div>
 
-			<button id = "botao_cadastro" onclick="myFunction()">Cadastrar</button>
-		</form>
+				<button id = "botao_cadastro" onclick="myFunction()" class="btn btn-outline-primary">Cadastrar</button>
+			</form>
+
 	</div>
 	<br>
-	<a href="{{route('home')}}" style = "text-decoration: none; color:#007bff">Voltar</a>	
-</body>
+
+@endsection
+@section('back')
+	<a href="{{route('home')}}" class="btn btn-outline-info mt-3">Voltar</a>
+@endsection
+{{-- </body> --}}
