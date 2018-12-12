@@ -61,7 +61,6 @@
                         <div class="form-group row mb-3">
                           <div class="col-md-6 offset-md-4">
                             <select required name="selecione" class="custom-select">
-                              <option>Selecione</option>
                               <option value="1">Gerente</option>
                               <option value="2">Funcionário</option>
                             </select>
