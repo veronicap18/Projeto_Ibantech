@@ -19,19 +19,19 @@
 				{{csrf_field()}}
 				<div class="form-group">
 					<label for="nome">Nome do animal:</label>
-					<input type = "text" name = "nome_animal" id="nome" class="form-control"/><br>
+					<input type = "text" name = "nome_animal" id="nome" class="form-control" required autofocus/><br>
 				</div>
 				<div class="form-group">
 					<label for="esp_animal">Espécie do animal:</label>
-					<input type = "text" name = "esp_animal" id="esp_animal" class="form-control"/><br>
+					<input type = "text" name = "esp_animal" id="esp_animal" class="form-control" required/><br>
 				</div>
 				<div class="form-group">
 					<label for="unidades">Unidade(s):</label>
-					<input type = "number" name = "unidades" class="form-control" id="unidades"/><br>
+					<input type = "number" name = "unidades" class="form-control" id="unidades" required/><br>
 				</div>
 				<div class="form-group">
 					<label for="num_setor">Núm. do setor: </label>
-					<input type = "number" name = "num_setor" class="form-control" id="num_setor"/><br>
+					<input type = "number" name = "num_setor" class="form-control" id="num_setor" required/><br>
 				</div>
 
 				<button id = "botao_cadastro" onclick="myFunction()" class="btn btn-outline-primary">Cadastrar</button>
