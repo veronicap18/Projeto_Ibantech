@@ -15,7 +15,21 @@
 		@if (count($return) > 0)
     		@foreach ($return as $item)
       		<div class="card card-body bg-ligh mb-3">
-        		<h3>{{$item->nome_animal}}</h3>
+						<div class="row">
+							<div class="col-3">
+								<div class="row">
+									<h3 class="ml-3"><b>Nome:</b></h3>
+									<h3 class="ml-2">{{$item->nome_animal}}</h3>
+								</div>
+							</div>
+							<div class="col-5">
+								<div class="row">
+									<h3><b>Especie:</b></h3>
+									<h3 class="ml-2">{{$item->esp_animal}}</h3>
+								</div>
+							</div>
+
+						</div>
             {{-- <p>{{$item->id}}</p> --}}
         		{{-- <small>Written on {{$item->created_at}}</small> --}}
 						<div class="btn-toolbar pull-right" role="toolbar">

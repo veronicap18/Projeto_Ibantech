@@ -19,15 +19,15 @@
 			{{csrf_field()}}
 			<div class="form-group">
 				<label for="prox_limpeza">Próxima limpeza:</label>
-				<input type = "datetime" name = "prox_limpeza" class="form-control" placeholder="YYYY-MM-DD" required autofocus/><br>
+				<input type = "datetime" name = "prox_limpeza" class="form-control" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" autofocus/><br>
 			</div>
 			<div class="form-group">
 				<label for="prox_vacina">Próxima vacina:</label>
-				<input type = "datetime" name = "prox_vacina" class="form-control" placeholder="YYYY-MM-DD" required/><br>
+				<input type = "datetime" name = "prox_vacina" class="form-control" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/><br>
 			</div>
 			<div class="form-group">
 				<label for="prox_alimentacao">Próxima alimentação:</label>
-				<input type = "datetime" name = "prox_alimentacao" class="form-control" placeholder="YYYY-MM-DD" required/><br>
+				<input type = "datetime" name = "prox_alimentacao" class="form-control" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/><br>
 			</div>
 			<input type="number" name="id" value="{{$id}}" style="display:none;">
 

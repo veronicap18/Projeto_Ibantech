@@ -18,11 +18,11 @@
 				</div>
 				<div class="form-group">
 					<label for="unidades">Unidade(s):</label>
-					<input type = "number" name = "unidades" class="form-control" id="unidades" placeholder="{{$request->unidades}}" required/><br>
+					<input type = "number" name = "unidades" class="form-control" id="unidades" min="1" placeholder="{{$request->unidades}}" required/><br>
 				</div>
 				<div class="form-group">
 					<label for="num_setor">Núm. do setor: </label>
-					<input type = "number" name = "num_setor" class="form-control" id="num_setor" placeholder="{{$request->num_setor}}" required/><br>
+					<input type = "number" name = "num_setor" class="form-control" id="num_setor" min="1" placeholder="{{$request->num_setor}}" required/><br>
 				</div>
 
 				<button id = "botao_cadastro" class="btn btn-outline-primary">Cadastrar</button>
