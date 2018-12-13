@@ -54,9 +54,9 @@ class manutencaoController extends Controller
     {
 
       $this->validate($request, [
-        'prox_limpeza' => 'required|date_format:Y/d/m',
-        'prox_vacina'  => 'required|date_format:Y/d/m',
-        'prox_alimentacao'  => 'required|date_format:Y/d/m',
+        'prox_limpeza' => 'required|date_format:Y/m/d',
+        'prox_vacina'  => 'required|date_format:Y/m/d',
+        'prox_alimentacao'  => 'required|date_format:Y/m/d',
         'id'  => 'required',
       ]);
 
